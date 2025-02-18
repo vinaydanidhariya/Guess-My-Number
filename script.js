@@ -52,6 +52,10 @@ highscore.textContent= getCookie('highscore');
 
 function checkNum() {
     let userInput = Number(guess.value);
+    if (Number(score.textContent) <= 0) {
+        alert("LOSE THE GAME PLEASE RESTART GAME");
+        return;
+    }
     if (ans === userInput) {
         message.textContent = "WINNER";
         ansMessage.textContent = ans;
